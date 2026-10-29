@@ -1,5 +1,5 @@
 'use strict';
-const ROUTE_CATALOG=[{date:'2026-10-28',number:'95058',file:'/route.enc.json'},{date:'2026-10-29',number:'95069',file:'/route-2026-10-29.enc.json'}];
+const ROUTE_CATALOG=[{date:'2026-10-28',number:'95058',file:'/route.enc.json'},{date:'2026-10-29',number:'95069',file:'/route-2026-10-29.enc.json'},{date:'2026-10-30',number:'95073',file:'/route-2026-10-30.enc.json'}];
 function routeIdentity(route){return route.date+':'+route.number;}
 function routeStorageKey(route){return KEY+':route:'+routeIdentity(route);}
 function rememberRoute(route){localStorage.setItem(routeStorageKey(route),JSON.stringify(route));let index=[];try{index=JSON.parse(localStorage.getItem('vodasp-route-index')||'[]');}catch{}if(!Array.isArray(index))index=[];index=index.filter(x=>x&&/^\d{4}-\d{2}-\d{2}$/.test(x.date)&&/^\d+$/.test(x.number)&&routeIdentity(x)!==routeIdentity(route));index.push({date:route.date,number:route.number});localStorage.setItem('vodasp-route-index',JSON.stringify(index));}
