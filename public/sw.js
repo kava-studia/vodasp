@@ -1,5 +1,5 @@
-const CACHE='vodasp-v10';
-const ASSETS=['/','/index.html','/app.js?v=9','/receipts.js?v=6','/routes.js?v=3','/history.js?v=2','/route-2026-10-30.enc.json','/demo.js?v=1','/navigation.js?v=1','/demo/2026-10-28.json','/demo/2026-10-29.json','/demo/2026-10-30.json','/route.enc.json','/route-2026-10-29.enc.json','/icon.svg','/manifest.webmanifest'];
+const CACHE='vodasp-v11';
+const ASSETS=['/','/index.html','/app.js?v=10','/receipts.js?v=6','/routes.js?v=3','/history.js?v=2','/route-2026-10-30.enc.json','/demo.js?v=1','/navigation.js?v=2','/demo/2026-10-28.json','/demo/2026-10-29.json','/demo/2026-10-30.json','/route.enc.json','/route-2026-10-29.enc.json','/icon.svg','/manifest.webmanifest'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('vodasp-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',event=>{if(event.request.method!=='GET'||new URL(event.request.url).origin!==self.location.origin)return;event.respondWith(fetch(event.request).then(res=>{if(res.ok){const copy=res.clone();caches.open(CACHE).then(c=>c.put(event.request,copy));}return res;}).catch(()=>caches.match(event.request).then(r=>r||new Response('Нет сети. Открой приложение при подключении.',{status:503}))));});
