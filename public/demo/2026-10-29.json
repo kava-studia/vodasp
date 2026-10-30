@@ -1,0 +1,691 @@
+{
+  "version": 1,
+  "dispatchRevision": 2,
+  "demonstration": true,
+  "date": "2026-10-29",
+  "number": "95069",
+  "title": "Демо - копия структуры маршрутного листа",
+  "weightKg": 2129.25,
+  "packagesPlanned": 115,
+  "startTime": "08:00",
+  "driveMinutes": 10,
+  "serviceMinutes": 10,
+  "depot": "",
+  "order": [
+    13,
+    11,
+    1,
+    5,
+    3,
+    4,
+    6,
+    7,
+    10,
+    9,
+    12,
+    2,
+    8,
+    18,
+    14,
+    15,
+    19,
+    16,
+    17
+  ],
+  "stopMinutes": {
+    "13": 20
+  },
+  "planSummary": "Демонстрация на структуре маршрутных листов Кавы: сроки, звонки, общие остановки, отдельные накладные, деньги и тара.",
+  "planNote": "Клиенты и адреса заменены. Оплаты, возвраты и время выполнения учебные. Это пример работы программы, а не фактический отчёт водителя. Порядок и время переездов условные.",
+  "stops": [
+    {
+      "id": 1,
+      "name": "Клиент № 1",
+      "address": "Сергиев Посад, проспект Красной Армии, 169",
+      "invoice": "DEMO-29-001",
+      "payment": "unknown",
+      "cash": 0,
+      "note": "Учебная заявка. Адрес и клиент заменены для демонстрации. Доставить до 13:00. Предварительный звонок за 60 мин.",
+      "phone": "",
+      "phase": "Демонстрационный маршрут",
+      "done": true,
+      "verified": true,
+      "close": "13:00",
+      "call": 60,
+      "callPolicy": "ahead",
+      "receipt": {
+        "method": "card",
+        "amountCents": 123000,
+        "recordedAt": "2026-10-29T09:06:00+03:00",
+        "updatedAt": "2026-10-29T09:06:00+03:00"
+      },
+      "doneAt": "2026-10-29T09:06:00+03:00",
+      "calledAt": "08:06",
+      "returnedByType": [
+        {
+          "type": "Ледниковая",
+          "count": 4
+        }
+      ],
+      "returned": 4,
+      "delivered": 4
+    },
+    {
+      "id": 2,
+      "name": "Клиент № 2",
+      "address": "Сергиев Посад, проспект Красной Армии, 142/1",
+      "invoice": "DEMO-29-002",
+      "payment": "unknown",
+      "cash": 0,
+      "note": "Учебная заявка. Адрес и клиент заменены для демонстрации. Доставить до 14:00. Обмен строго 1:1.",
+      "phone": "",
+      "phase": "Демонстрационный маршрут",
+      "done": true,
+      "verified": true,
+      "close": "14:00",
+      "call": 0,
+      "exchangeOneToOne": true,
+      "receipt": {
+        "method": "cash",
+        "amountCents": 164000,
+        "recordedAt": "2026-10-29T11:48:00+03:00",
+        "updatedAt": "2026-10-29T11:48:00+03:00"
+      },
+      "doneAt": "2026-10-29T11:48:00+03:00",
+      "calledAt": "",
+      "returnedByType": [
+        {
+          "type": "Другие марки",
+          "count": 4
+        }
+      ],
+      "returned": 4,
+      "delivered": 4
+    },
+    {
+      "id": 3,
+      "name": "Офис № 3",
+      "address": "Сергиев Посад, Пионерская улица, 6",
+      "invoice": "DEMO-29-003",
+      "payment": "none",
+      "cash": 0,
+      "note": "Учебная заявка. Адрес и клиент заменены для демонстрации. Обед 12:30-14:30. Один заезд, накладная учитывается отдельно. Предварительный звонок за 60 мин.",
+      "phone": "",
+      "phase": "Демонстрационный маршрут",
+      "done": true,
+      "verified": true,
+      "breakStart": "12:30",
+      "breakEnd": "14:30",
+      "call": 60,
+      "callPolicy": "ahead",
+      "deliveryGroup": "administration-169",
+      "groupMode": "building",
+      "receipt": {
+        "method": "none",
+        "amountCents": 0,
+        "recordedAt": "2026-10-29T09:42:00+03:00",
+        "updatedAt": "2026-10-29T09:42:00+03:00"
+      },
+      "doneAt": "2026-10-29T09:42:00+03:00",
+      "calledAt": "08:42",
+      "returnedByType": [
+        {
+          "type": "Пилигрим",
+          "count": 3
+        }
+      ],
+      "returned": 3,
+      "delivered": 3
+    },
+    {
+      "id": 4,
+      "name": "Офис № 4",
+      "address": "Сергиев Посад, Пионерская улица, 6",
+      "invoice": "DEMO-29-004",
+      "payment": "cash",
+      "cash": 420,
+      "note": "Учебная заявка. Адрес и клиент заменены для демонстрации. Приём с 09:00. Доставить до 18:00. Обед 13:00-14:00. Один заезд, накладная учитывается отдельно. Предварительный звонок за 60 мин.",
+      "phone": "",
+      "phase": "Демонстрационный маршрут",
+      "done": true,
+      "verified": true,
+      "open": "09:00",
+      "close": "18:00",
+      "breakStart": "13:00",
+      "breakEnd": "14:00",
+      "call": 60,
+      "callPolicy": "ahead",
+      "deliveryGroup": "administration-169",
+      "groupMode": "building",
+      "receipt": {
+        "method": "cash",
+        "amountCents": 82000,
+        "recordedAt": "2026-10-29T10:00:00+03:00",
+        "updatedAt": "2026-10-29T10:00:00+03:00"
+      },
+      "doneAt": "2026-10-29T10:00:00+03:00",
+      "calledAt": "09:00",
+      "returnedByType": [
+        {
+          "type": "Другие марки",
+          "count": 4
+        }
+      ],
+      "returned": 4,
+      "delivered": 4
+    },
+    {
+      "id": 5,
+      "name": "Офис № 5",
+      "address": "Сергиев Посад, Пионерская улица, 6",
+      "invoice": "DEMO-29-005",
+      "payment": "cash",
+      "cash": 820,
+      "note": "Учебная заявка. Адрес и клиент заменены для демонстрации. Приём с 09:00. Доставить до 17:00. Обед 13:00-14:00. Один заезд, накладная учитывается отдельно.",
+      "phone": "",
+      "phase": "Демонстрационный маршрут",
+      "done": true,
+      "verified": true,
+      "open": "09:00",
+      "close": "17:00",
+      "breakStart": "13:00",
+      "breakEnd": "14:00",
+      "call": 0,
+      "priority": true,
+      "deliveryGroup": "administration-169",
+      "groupMode": "building",
+      "receipt": {
+        "method": "cash",
+        "amountCents": 164000,
+        "recordedAt": "2026-10-29T09:24:00+03:00",
+        "updatedAt": "2026-10-29T09:24:00+03:00"
+      },
+      "doneAt": "2026-10-29T09:24:00+03:00",
+      "calledAt": "",
+      "returnedByType": [
+        {
+          "type": "Кашинка",
+          "count": 2
+        }
+      ],
+      "returned": 2,
+      "delivered": 2
+    },
+    {
+      "id": 6,
+      "name": "Офис № 6",
+      "address": "Сергиев Посад, Пионерская улица, 6",
+      "invoice": "DEMO-29-006",
+      "payment": "cash",
+      "cash": 1230,
+      "note": "Учебная заявка. Адрес и клиент заменены для демонстрации. Приём с 09:00. Доставить до 17:00. Обед 13:00-14:00. Один заезд, накладная учитывается отдельно.",
+      "phone": "",
+      "phase": "Демонстрационный маршрут",
+      "done": true,
+      "verified": true,
+      "open": "09:00",
+      "close": "17:00",
+      "breakStart": "13:00",
+      "breakEnd": "14:00",
+      "call": 0,
+      "deliveryGroup": "administration-169",
+      "groupMode": "building",
+      "receipt": {
+        "method": "card",
+        "amountCents": 123000,
+        "recordedAt": "2026-10-29T10:18:00+03:00",
+        "updatedAt": "2026-10-29T10:18:00+03:00"
+      },
+      "doneAt": "2026-10-29T10:18:00+03:00",
+      "calledAt": "",
+      "returnedByType": [
+        {
+          "type": "Во!Да!",
+          "count": 2
+        }
+      ],
+      "returned": 2,
+      "delivered": 2
+    },
+    {
+      "id": 7,
+      "name": "Клиент № 7",
+      "address": "Сергиев Посад, Пионерская улица, 12",
+      "invoice": "DEMO-29-007",
+      "payment": "unknown",
+      "cash": 0,
+      "note": "Учебная заявка. Адрес и клиент заменены для демонстрации. Приём с 09:00. Доставить до 19:00. Предварительный звонок за 30 мин.",
+      "phone": "",
+      "phase": "Демонстрационный маршрут",
+      "done": true,
+      "verified": true,
+      "open": "09:00",
+      "close": "19:00",
+      "call": 30,
+      "callPolicy": "ahead",
+      "receipt": {
+        "method": "cash",
+        "amountCents": 164000,
+        "recordedAt": "2026-10-29T10:36:00+03:00",
+        "updatedAt": "2026-10-29T10:36:00+03:00"
+      },
+      "doneAt": "2026-10-29T10:36:00+03:00",
+      "calledAt": "09:36",
+      "returnedByType": [
+        {
+          "type": "ГЗГ",
+          "count": 3
+        }
+      ],
+      "returned": 3,
+      "delivered": 3
+    },
+    {
+      "id": 8,
+      "name": "Клиент № 8",
+      "address": "Сергиев Посад, проспект Красной Армии, 212А",
+      "invoice": "DEMO-29-008",
+      "payment": "unknown",
+      "cash": 0,
+      "note": "Учебная заявка. Адрес и клиент заменены для демонстрации. Доставить до 14:00. Обмен строго 1:1.",
+      "phone": "",
+      "phase": "Демонстрационный маршрут",
+      "done": true,
+      "verified": true,
+      "close": "14:00",
+      "call": 0,
+      "exchangeOneToOne": true,
+      "receipt": {
+        "method": "card",
+        "amountCents": 42000,
+        "recordedAt": "2026-10-29T12:06:00+03:00",
+        "updatedAt": "2026-10-29T12:06:00+03:00"
+      },
+      "doneAt": "2026-10-29T12:06:00+03:00",
+      "calledAt": "",
+      "returnedByType": [
+        {
+          "type": "Во!Да!",
+          "count": 2
+        }
+      ],
+      "returned": 2,
+      "delivered": 2
+    },
+    {
+      "id": 9,
+      "name": "Клиент № 9",
+      "address": "Сергиев Посад, проспект Красной Армии, 212В",
+      "invoice": "DEMO-29-009",
+      "payment": "cash",
+      "cash": 820,
+      "note": "Учебная заявка. Адрес и клиент заменены для демонстрации. Приём с 10:00. Доставить до 19:00.",
+      "phone": "",
+      "phase": "Демонстрационный маршрут",
+      "done": true,
+      "verified": true,
+      "open": "10:00",
+      "close": "19:00",
+      "call": 0,
+      "receipt": {
+        "method": "cash",
+        "amountCents": 82000,
+        "recordedAt": "2026-10-29T11:12:00+03:00",
+        "updatedAt": "2026-10-29T11:12:00+03:00"
+      },
+      "doneAt": "2026-10-29T11:12:00+03:00",
+      "calledAt": "",
+      "returnedByType": [
+        {
+          "type": "Кашинка",
+          "count": 2
+        }
+      ],
+      "returned": 2,
+      "delivered": 2
+    },
+    {
+      "id": 10,
+      "name": "Клиент № 10",
+      "address": "Сергиев Посад, проспект Красной Армии, 138/2",
+      "invoice": "DEMO-29-010",
+      "payment": "unknown",
+      "cash": 0,
+      "note": "Учебная заявка. Адрес и клиент заменены для демонстрации. Приём с 09:00. Доставить до 18:00. Предварительный звонок за 30 мин.",
+      "phone": "",
+      "phase": "Демонстрационный маршрут",
+      "done": true,
+      "verified": true,
+      "open": "09:00",
+      "close": "18:00",
+      "call": 30,
+      "callPolicy": "ahead",
+      "receipt": {
+        "method": "card",
+        "amountCents": 42000,
+        "recordedAt": "2026-10-29T10:54:00+03:00",
+        "updatedAt": "2026-10-29T10:54:00+03:00"
+      },
+      "doneAt": "2026-10-29T10:54:00+03:00",
+      "calledAt": "09:54",
+      "returnedByType": [
+        {
+          "type": "Ледниковая",
+          "count": 4
+        }
+      ],
+      "returned": 4,
+      "delivered": 4
+    },
+    {
+      "id": 11,
+      "name": "Клиент № 11",
+      "address": "Сергиев Посад, Вознесенская улица, 15",
+      "invoice": "DEMO-29-011",
+      "payment": "paid",
+      "cash": 0,
+      "note": "Учебная заявка. Адрес и клиент заменены для демонстрации. Предварительный звонок за 60 мин.",
+      "phone": "",
+      "phase": "Демонстрационный маршрут",
+      "done": true,
+      "verified": true,
+      "call": 60,
+      "callPolicy": "ahead",
+      "priority": true,
+      "receipt": {
+        "method": "prepaid",
+        "amountCents": 0,
+        "recordedAt": "2026-10-29T08:48:00+03:00",
+        "updatedAt": "2026-10-29T08:48:00+03:00"
+      },
+      "doneAt": "2026-10-29T08:48:00+03:00",
+      "calledAt": "07:48",
+      "returnedByType": [
+        {
+          "type": "ГЗГ",
+          "count": 3
+        }
+      ],
+      "returned": 3,
+      "delivered": 3
+    },
+    {
+      "id": 12,
+      "name": "Клиент № 12",
+      "address": "Сергиев Посад, улица Карла Маркса, 7",
+      "invoice": "DEMO-29-012",
+      "payment": "unknown",
+      "cash": 0,
+      "note": "Учебная заявка. Адрес и клиент заменены для демонстрации. Приём с 09:00. Доставить до 17:00.",
+      "phone": "",
+      "phase": "Демонстрационный маршрут",
+      "done": true,
+      "verified": true,
+      "open": "09:00",
+      "close": "17:00",
+      "call": 0,
+      "receipt": {
+        "method": "card",
+        "amountCents": 123000,
+        "recordedAt": "2026-10-29T11:30:00+03:00",
+        "updatedAt": "2026-10-29T11:30:00+03:00"
+      },
+      "doneAt": "2026-10-29T11:30:00+03:00",
+      "calledAt": "",
+      "returnedByType": [
+        {
+          "type": "Пилигрим",
+          "count": 3
+        }
+      ],
+      "returned": 3,
+      "delivered": 3
+    },
+    {
+      "id": 13,
+      "name": "Клиент № 13",
+      "address": "Сергиев Посад, Вокзальная площадь, 1",
+      "invoice": "DEMO-29-013",
+      "payment": "unknown",
+      "cash": 0,
+      "note": "Учебная заявка. Адрес и клиент заменены для демонстрации. Приём с 08:30. Доставить до 17:00. Предварительный звонок за 30 мин.",
+      "phone": "",
+      "phase": "Демонстрационный маршрут",
+      "done": true,
+      "verified": true,
+      "open": "08:30",
+      "close": "17:00",
+      "call": 30,
+      "callPolicy": "ahead",
+      "priority": true,
+      "receipt": {
+        "method": "card",
+        "amountCents": 42000,
+        "recordedAt": "2026-10-29T08:30:00+03:00",
+        "updatedAt": "2026-10-29T08:30:00+03:00"
+      },
+      "doneAt": "2026-10-29T08:30:00+03:00",
+      "calledAt": "07:30",
+      "returnedByType": [
+        {
+          "type": "Во!Да!",
+          "count": 2
+        }
+      ],
+      "returned": 2,
+      "delivered": 2
+    },
+    {
+      "id": 14,
+      "name": "Клиент № 14",
+      "address": "Сергиев Посад, проспект Красной Армии, 97",
+      "invoice": "DEMO-29-014",
+      "payment": "unknown",
+      "cash": 0,
+      "note": "Учебная заявка. Адрес и клиент заменены для демонстрации. Предварительный звонок за 60 мин.",
+      "phone": "",
+      "phase": "Демонстрационный маршрут",
+      "done": true,
+      "verified": true,
+      "call": 60,
+      "callPolicy": "ahead",
+      "receipt": {
+        "method": "card",
+        "amountCents": 123000,
+        "recordedAt": "2026-10-29T12:42:00+03:00",
+        "updatedAt": "2026-10-29T12:42:00+03:00"
+      },
+      "doneAt": "2026-10-29T12:42:00+03:00",
+      "calledAt": "11:42",
+      "returnedByType": [
+        {
+          "type": "Ледниковая",
+          "count": 4
+        }
+      ],
+      "returned": 4,
+      "delivered": 4
+    },
+    {
+      "id": 15,
+      "name": "Клиент № 15",
+      "address": "Сергиев Посад, проспект Красной Армии, 91",
+      "invoice": "DEMO-29-015",
+      "payment": "unknown",
+      "cash": 0,
+      "note": "Учебная заявка. Адрес и клиент заменены для демонстрации. Предварительный звонок за 60 мин.",
+      "phone": "",
+      "phase": "Демонстрационный маршрут",
+      "done": true,
+      "verified": true,
+      "call": 60,
+      "callPolicy": "ahead",
+      "receipt": {
+        "method": "cash",
+        "amountCents": 164000,
+        "recordedAt": "2026-10-29T13:00:00+03:00",
+        "updatedAt": "2026-10-29T13:00:00+03:00"
+      },
+      "doneAt": "2026-10-29T13:00:00+03:00",
+      "calledAt": "12:00",
+      "returnedByType": [
+        {
+          "type": "Кашинка",
+          "count": 2
+        }
+      ],
+      "returned": 2,
+      "delivered": 2
+    },
+    {
+      "id": 16,
+      "name": "Клиент № 16",
+      "address": "Сергиев Посад, Вознесенская улица, 55",
+      "invoice": "DEMO-29-016",
+      "payment": "cash",
+      "cash": 420,
+      "note": "Учебная заявка. Адрес и клиент заменены для демонстрации. Приём с 08:00. Доставить до 17:00. Предварительный звонок за 60 мин.",
+      "phone": "",
+      "phase": "Демонстрационный маршрут",
+      "done": true,
+      "verified": true,
+      "open": "08:00",
+      "close": "17:00",
+      "call": 60,
+      "callPolicy": "ahead",
+      "receipt": {
+        "method": "cash",
+        "amountCents": 82000,
+        "recordedAt": "2026-10-29T13:36:00+03:00",
+        "updatedAt": "2026-10-29T13:36:00+03:00"
+      },
+      "doneAt": "2026-10-29T13:36:00+03:00",
+      "calledAt": "12:36",
+      "returnedByType": [
+        {
+          "type": "Другие марки",
+          "count": 4
+        }
+      ],
+      "returned": 4,
+      "delivered": 4
+    },
+    {
+      "id": 17,
+      "name": "Клиент № 17",
+      "address": "Сергиев Посад, проспект Красной Армии, 77",
+      "invoice": "DEMO-29-017",
+      "payment": "unknown",
+      "cash": 0,
+      "note": "Учебная заявка. Адрес и клиент заменены для демонстрации. Приём с 12:00. Доставить до 18:00.",
+      "phone": "",
+      "phase": "Демонстрационный маршрут",
+      "done": true,
+      "verified": true,
+      "open": "12:00",
+      "close": "18:00",
+      "call": 0,
+      "callPolicy": "ahead",
+      "receipt": {
+        "method": "card",
+        "amountCents": 123000,
+        "recordedAt": "2026-10-29T13:54:00+03:00",
+        "updatedAt": "2026-10-29T13:54:00+03:00"
+      },
+      "doneAt": "2026-10-29T13:54:00+03:00",
+      "calledAt": "",
+      "returnedByType": [
+        {
+          "type": "Во!Да!",
+          "count": 2
+        }
+      ],
+      "returned": 2,
+      "delivered": 2
+    },
+    {
+      "id": 18,
+      "name": "Клиент № 18",
+      "address": "Сергиев Посад, проспект Красной Армии, 12",
+      "invoice": "DEMO-29-018",
+      "payment": "cash",
+      "cash": 1230,
+      "note": "Учебная заявка. Адрес и клиент заменены для демонстрации. Доставить до 14:00. Предварительный звонок за 30 мин.",
+      "phone": "",
+      "phase": "Демонстрационный маршрут",
+      "done": true,
+      "verified": true,
+      "close": "14:00",
+      "call": 30,
+      "callPolicy": "ahead",
+      "receipt": {
+        "method": "cash",
+        "amountCents": 82000,
+        "recordedAt": "2026-10-29T12:24:00+03:00",
+        "updatedAt": "2026-10-29T12:24:00+03:00"
+      },
+      "doneAt": "2026-10-29T12:24:00+03:00",
+      "calledAt": "11:24",
+      "returnedByType": [
+        {
+          "type": "ГЗГ",
+          "count": 3
+        }
+      ],
+      "returned": 3,
+      "delivered": 3
+    },
+    {
+      "id": 19,
+      "name": "Клиент № 19",
+      "address": "Сергиев Посад, проспект Красной Армии, 188",
+      "invoice": "DEMO-29-019",
+      "payment": "unknown",
+      "cash": 0,
+      "note": "Учебная заявка. Адрес и клиент заменены для демонстрации. Приём с 08:00. Доставить до 17:00. Предварительный звонок за 30 мин.",
+      "phone": "",
+      "phase": "Демонстрационный маршрут",
+      "done": true,
+      "verified": true,
+      "open": "08:00",
+      "close": "17:00",
+      "call": 30,
+      "callPolicy": "ahead",
+      "receipt": {
+        "method": "card",
+        "amountCents": 42000,
+        "recordedAt": "2026-10-29T13:18:00+03:00",
+        "updatedAt": "2026-10-29T13:18:00+03:00"
+      },
+      "doneAt": "2026-10-29T13:18:00+03:00",
+      "calledAt": "12:18",
+      "returnedByType": [
+        {
+          "type": "Пилигрим",
+          "count": 3
+        }
+      ],
+      "returned": 3,
+      "delivered": 3
+    }
+  ],
+  "cashDrawer": {
+    "bills": {
+      "5000": 1,
+      "2000": 2,
+      "1000": 0,
+      "500": 1,
+      "200": 1,
+      "100": 1,
+      "50": 0,
+      "10": 4
+    },
+    "coinsCents": 0,
+    "openingCents": 0,
+    "paidOutCents": 0
+  },
+  "closeout": {
+    "closedAt": "2026-10-29T18:00:00+03:00",
+    "demonstration": true
+  }
+}
